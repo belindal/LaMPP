@@ -23,8 +23,8 @@ To cite LaMPP, please use
 }
 ```
 
-All code in our implementations build off existing code for base models in each task:
+Our implementations build off existing code for base models in each task:
 * Image segmentation builds off of [RedNet](https://github.com/JindongJiang/RedNet).
-* Object navigation builds off of the [Stubborn agent](https://github.com/Improbable-AI/Stubborn) and the [Habitat Challenge](https://github.com/belindal/habitat-challenge).
+* Object navigation builds off of the [Stubborn agent](https://github.com/Improbable-AI/Stubborn) and the [Habitat Challenge](https://github.com/facebookresearch/habitat-challenge).
 * Video-action segmentation builds off of [this repository](https://github.com/dpfried/action-segmentation).
 
