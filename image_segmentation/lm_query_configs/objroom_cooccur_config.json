@@ -1,0 +1,40 @@
+{
+    "engine": "text-davinci-002",
+    "examples": {
+        "plausible": [
+            "A bathroom has toilet: plausible",
+            "A bedroom has bed: plausible",
+            "A living room has tv: plausible",
+            "A kitchen has fridge: plausible"
+        ],
+        "implausible": [
+            "An office has night stand: implausible",
+            "A kitchen has shower curtain: implausible",
+            "A bathroom has sofa: implausible",
+            "A bedroom has bathtub: implausible"
+        ]
+    },
+    "n_examples": {
+        "plausible": 3,
+        "implausible": 3
+    },
+    "prompt_format": "{room} has {obj}: ",
+    "inputs": {
+        "obj": [
+            "wall", "floor", "cabinet", "bed", "chair", "sofa", "table", "door",
+            "window", "bookshelf", "picture", "counter", "blinds", "desk",
+            "shelves", "curtain", "dresser", "pillow", "mirror", "floor mat",
+            "clothes", "ceiling", "books", "fridge", "TV", "paper", "towel",
+            "shower curtain", "box", "whiteboard", "person", "night stand",
+            "toilet", "sink", "lamp", "bathtub", "bag"
+        ],
+        "room": [
+            "A bathroom", "A bedroom", "A living room", "An office", "A kitchen"
+        ]
+    },
+    "classes": [
+        "plausible",
+        "implausible"
+    ],
+    "binary_pred": true
+}

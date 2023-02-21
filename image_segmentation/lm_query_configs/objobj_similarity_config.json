@@ -1,0 +1,45 @@
+{
+    "engine": "text-davinci-002",
+    "examples": {
+        "plausible": [
+            "The table looks like the desk: plausible",
+            "The curtain looks like the shower curtain: plausible",
+            "The bed looks like the sofa: plausible",
+            "The sofa looks like the chair: plausible"
+        ],
+        "implausible": [
+            "The dresser looks like the lamp: implausible",
+            "The towel looks like the toilet: implausible",
+            "The shelves looks like the pillow: implausible",
+            "The paper looks like the bathtub: implausible"
+        ]
+    },
+    "n_examples": {
+        "plausible": 3,
+        "implausible": 3
+    },
+    "prompt_format": "The {obj} looks like the {obj2}: ",
+    "inputs": {
+        "obj": [
+            "wall", "floor", "cabinet", "bed", "chair", "sofa", "table", "door",
+            "window", "bookshelf", "picture", "counter", "blinds", "desk",
+            "shelves", "curtain", "dresser", "pillow", "mirror", "floor mat",
+            "clothes", "ceiling", "books", "fridge", "tv", "paper", "towel",
+            "shower curtain", "box", "whiteboard", "person", "night stand",
+            "toilet", "sink", "lamp", "bathtub", "bag"
+        ],
+        "obj2": [
+            "wall", "floor", "cabinet", "bed", "chair", "sofa", "table", "door",
+            "window", "bookshelf", "picture", "counter", "blinds", "desk",
+            "shelves", "curtain", "dresser", "pillow", "mirror", "floor mat",
+            "clothes", "ceiling", "books", "fridge", "tv", "paper", "towel",
+            "shower curtain", "box", "whiteboard", "person", "night stand",
+            "toilet", "sink", "lamp", "bathtub", "bag"
+        ]
+    },
+    "classes": [
+        "plausible",
+        "implausible"
+    ],
+    "binary_pred": true
+}
