@@ -21,11 +21,11 @@ You can download pre-trained checkpoint trained on the full SUNRGB-D dataset fro
 
 
 ## Usage
-The language model priors used for LaMPP for image segmentation can be found in [`lm_priors_saved/gpt3_sunrgbd_obj_obj_similarity_binary.npy`](https://github.com/belindal/LaMPP/image_segmentation/lm_priors_saved/gpt3_sunrgbd_obj_obj_similarity_binary.npy) and [`lm_priors_saved/gpt3_sunrgbd_room_obj_cooccurence_binary.npy`](https://github.com/belindal/LaMPP/image_segmentation/lm_priors_saved/gpt3_sunrgbd_room_obj_cooccurence_binary.npy).
+The language model priors used for LaMPP for image segmentation can be found in [`lm_priors_saved/gpt3_sunrgbd_obj_obj_similarity_binary.npy`](https://github.com/belindal/LaMPP/blob/main/image_segmentation/lm_priors_saved/gpt3_sunrgbd_obj_obj_similarity_binary.npy) and [`lm_priors_saved/gpt3_sunrgbd_room_obj_cooccurence_binary.npy`](https://github.com/belindal/LaMPP/blob/main/image_segmentation/lm_priors_saved/gpt3_sunrgbd_room_obj_cooccurence_binary.npy).
 These probabilities were obtained by querying GPT3 `davinci-002`.
 
 ### Generating Priors
-The script for generating these priors is located in the parent directory, under [`../get_lm_priors.py`](https://github.com/belindal/LaMPP/get_lm_priors.py), and can be run using
+The script for generating these priors is located in the parent directory, under [`../get_lm_priors.py`](https://github.com/belindal/LaMPP/blob/main/get_lm_priors.py), and can be run using
 ```bash
 export PYTHONPATH=..
 # get object-object perceptual similarity priors
