@@ -1,9 +1,9 @@
 # LaMPP for Image Segmentation
-![Generative Model for Image Segmentation](https://github.com/belindal/LaMPP/blob/main/imgs/imageseg.png)
-
 This repository contains code for LaMPP for image segmentation.
 We follow a simple generative model of image segmentation where the room labels generate the object segment labels, which generate the observations. We then perform joint inference over object labels to derive their optimal configuration given observation.
 Large parts of the code for this task is adapted from [RedNet code](https://github.com/JindongJiang/RedNet).
+
+<img src="https://github.com/belindal/LaMPP/blob/main/imgs/imageseg.png" width=350>
 
 
 ## Preliminaries
