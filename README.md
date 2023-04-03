@@ -1,4 +1,6 @@
 # LaMPP: Language Models as Probabilistic Priors for Perception and Action
+![LaMPP Overview](https://github.com/belindal/LaMPP/blob/main/imgs/teaser.png)
+
 LaMPP is a method for injecting priors derived from language models into probabilistic models of perception and action.
 LaMPP is a generic method with specific instantiations for each task it's applied to.
 Code is largely adapted from existing external task-specific models, with additional modifications on top to integrate priors from the language model.
