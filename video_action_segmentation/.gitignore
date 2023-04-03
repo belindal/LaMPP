@@ -1,0 +1,4 @@
+*.pyc
+/.idea/
+/act-recog.iml
+expts/
