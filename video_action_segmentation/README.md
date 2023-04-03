@@ -1,5 +1,5 @@
 # LaMPP for Video Action Segmentation
-![Generative Model for Video Action Segmentation](https://github.com/belindal/LaMPP/blob/main/imgs/actseg.png)
+<img src="https://github.com/belindal/LaMPP/blob/main/imgs/actseg.png" width=300>
 
 This repository contains code for LaMPP for action recognition and segmentation from video.
 In this domain, we use LMs to place a prior over *model parameters*. The underlying model we use is an HSMM.
