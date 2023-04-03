@@ -1,4 +1,8 @@
-# LaMPP for Video Action Segmentation  
+# LaMPP for Video Action Segmentation
+This repository contains code for LaMPP for action recognition and segmentation from video.
+In this domain, we use LMs to place a prior over *model parameters*. The underlying model we use is an HSMM.
+We follow a simple generative model of action-transition parameters where the task being demonstrated in the video generates a Dirichlet prior over  these transition probabilities.
+We then perform joint inference (Viterbi algorithm) over action labels to derive their optimal configuration given observation.
 Large parts of the code for this task is adapted from [this repository](https://github.com/dpfried/action-segmentation).
 
 ## Setup
@@ -72,6 +76,7 @@ Train the HSMM on the full training set, skipping background scenes:
 Model weights will be saved to `expts/crosstask_i3d-resnet-audio/pca_semimarkov_sup_nobkg`.
 
 **Training on OOD data**
+
 To train on only a subset of videos, add `--train_subset <train_subset>`.
 
 For example, in the paper we train on a subset of videos (located at [`data/crosstask/crosstask_release/videos_train_heldout_transition.csv`](https://github.com/belindal/LaMPP/blob/main/video_action_segmentation/data/crosstask/crosstask_release/videos_train_heldout_transition.csv)) created by holding out certain common action transitions and excluding any videos that demonstrate that action transition. To replicate this, use
@@ -85,6 +90,7 @@ For example, in the paper we train on a subset of videos (located at [`data/cros
 ```
 
 **Training Model with LM Priors over Parameters**
+
 To use a GPT3 prior over HSMM (action transition) parameters, add `--use_lm_smoothing gpt3 --sm_supervised_state_smoothing <smoothing_param>`, whereby `<smoothing_param>` is a float specifying how much weight to put on the prior over the posterior (equivalently, the smoothing parameter) when learning the weights.
 
 *Note*: The GPT3 priors must be located under:
@@ -117,6 +123,7 @@ To evaluate trained models, run
 whereby `<save_path>` is the saved model path (`pca_semimarkov_sup_nobkg` and `pca_semimarkov_sup_nobkg_heldout_transition` in the above two examples, respectively).
 
 **Replacing Model Parameters with LM Priors during Evaluation**
+
 *Note*: The GPT3 priors must be located under:
 * [`lm_priors_saved/gpt3_init_action_by_task.pkl.npy`](https://github.com/belindal/LaMPP/blob/main/video_action_segmentation/lm_priors_saved/gpt3_init_action_by_task.pkl.npy)
 * [`lm_priors_saved/gpt3_trans_action_by_task.pkl.npy`](https://github.com/belindal/LaMPP/blob/main/video_action_segmentation/lm_priors_saved/gpt3_init_action_by_task.pkl.npy)
